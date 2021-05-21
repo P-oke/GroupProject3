@@ -1,0 +1,5 @@
+Country			 WinningYear
+Brazil			 2002
+Italy			 2006
+Spain			 2010
+Germany			 2014
