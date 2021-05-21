@@ -11,9 +11,9 @@ namespace GroupProject
 
             try
             {
-                document.createFolder();
-                document.writeToTextFile();
-                document.readFromTextFile();
+                document.CreateFolder();
+                document.WriteToTextFile();
+                document.ReadFromTextFile();
             }
             catch (Exception Ex)
             {
