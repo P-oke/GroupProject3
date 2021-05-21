@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace GroupProject
 {
     class Program
@@ -19,7 +18,6 @@ namespace GroupProject
             {
                 Console.WriteLine(Ex.Message);
             }
-
 
 
 

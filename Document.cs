@@ -20,31 +20,42 @@ namespace GroupProject
         public void CreateFolder()
         {
 
+            if (Directory.Exists(folderPath))
             {
-                if (Directory.Exists(folderPath))
-                {
-                    Console.WriteLine("The folder path already exists.");
-                    return;
-                }
-                else
-                {
-                    Directory.CreateDirectory(filePath);
-                    Console.WriteLine("The folder was created successfully.");
-                }
-
+                Console.WriteLine("The folder path already exists.");
+                return;
             }
+            else
+            {
+                Directory.CreateDirectory(folderPath);
+                Console.WriteLine("The folder was created successfully.");
+            }
+
 
         }
 
         public void WriteToTextFile()
         {
 
+            string[] countries = new[]{"Uruguay", "Italy", "Italy", "Uruguay", "West Germany",
+                                    "Brazil", "Brazil", "England", "Brazil", "West Germany",
+                                    "Argentina", "Italy", "Argentina", "West Germany", "Brazil",
+                                    "France", "Brazil", "Italy", "Spain", "Germany", "France"};
+
+            string[] year = new[]{"1930", "1934", "1938", "1950", "1954",
+                                    "1958", "1962", "1966", "1970", "1974",
+                                    "1978", "1982", "1986", "1990", "1994",
+                                    "1998", "2002", "2006", "2010", "2014", "2018"};
+
             List<string> textFileInput = new List<string>();
-            textFileInput.Add("Country\t\t\t WinningYear");
-            textFileInput.Add("Brazil\t\t\t 2002");
-            textFileInput.Add("Italy\t\t\t 2006");
-            textFileInput.Add("Spain\t\t\t 2010");
-            textFileInput.Add("Germany\t\t\t 2014");
+
+            textFileInput.Add("WinningYear\t\tCountry");
+            for (int i = 0; i < countries.Length; i++)
+            {
+
+                textFileInput.Add($"{year[i]}\t\t\t {countries[i]}");
+
+            }
 
             Console.WriteLine("You have successfully written to the file.");
 
@@ -65,6 +76,5 @@ namespace GroupProject
 
         }
     }
-
 
 }
